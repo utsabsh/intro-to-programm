@@ -1,0 +1,138 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+ }
+ 
+ body{
+    width:100%;
+    background-image: url('https://th.bing.com/th/id/R.9fdb4d72641f3ea67cc5ed2ac1589482?rik=RF8VZsv44h5XeA&pid=ImgRaw&r=0');
+ background-size: cover;
+ background-repeat: no-repeat;
+ height: 100vh;
+ width: 100%;
+ 
+ }
+ .title h1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 42px;
+    color:rgb(0, 178, 116);
+    padding-top: 80px;
+ }
+
+ .title h1::after{
+    content:"";
+    height:4px;
+    width:230px;
+    background-color: #000;
+    display:block;
+    margin: auto;
+ }
+ .services{
+    width:85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 75px auto;
+    text-align: center;
+ 
+ }
+ .card{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin:0px 20px;
+    padding: 20px 20px;
+    background-color: #f0e2e2;
+    opacity: 0.5;
+    border-radius: 10px;
+    cursor: pointer;
+ 
+ }
+ .card .icon{
+    font-size: 35px;
+    margin-bottom: 10px;
+ 
+ }
+ .card h2{
+    font-size: 29px;
+    color: #c94f4f;
+    margin-bottom: 20px;
+    
+ 
+ }
+ .card p{
+    font-size: 17px;
+    margin-bottom: 30px;
+    line-height: 2.5;
+    color:#170606;
+
+ }
+ 
+
+ 
+ 
+ 
+  .button{
+    font-size: 15px;
+    text-decoration: none;
+    color:#fff;
+    background-color: #2c677c;
+    padding:8px 12px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+ 
+ }
+ .button:hover{
+    background-color:rgb(57, 46, 68);
+    transition: 0.4s;
+ }
+ .card:hover{
+    background-color: aqua;
+    transition: 0.3s;
+ }
+ 
+ 
+ 
+ .utsab{
+    position: fixed;
+    width:100%;
+    background: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height:60px;
+    text-align: center;
+    padding: 5px;
+    
+ }
+ .menu li a{
+    color:white;
+    text-decoration: none;
+ }
+ .utsab .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color:#fff;
+    text-decoration: none;
+ }
+ .utsab .menu li{
+    list-style: none;
+    display:inline-block;
+    font-size:18px;
+    font-weight:500;
+    margin-left:25px;
+    color: white;
+ }
+ .utsab .width{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ .width{
+    padding:0 80px;
+    margin:auto;
+    max-width: 1300px;
+ }
