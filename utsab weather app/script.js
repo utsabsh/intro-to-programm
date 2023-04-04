@@ -1,56 +1,46 @@
-let weather = {
-    apiKey: "f43e68aa9289f3dc1e3694826d06a46c",
-    fetchWeather: function (city) {
-      fetch(
-        "https://api.openweathermap.org/data/2.5/weather?q=" +
-          city +
-          "&units=metric&appid=" +
-          this.apiKey
-      )
-        .then((response) => {
-          if (!response.ok) {
-            alert("No city found.");
-            throw new Error("No city found.");
-          }
-          return response.json();
-        })
-        .then((data) => this.displayWeather(data));
-    },
-    displayWeather: function (data) {
-      const { name } = data;
-      const { icon, description } = data.weather[0];
-      const { temp, humidity } = data.main;
-      const { speed } = data.wind;
-      const { dt } = data.dt;
-    
-      document.querySelector(".city").innerText = "Weather in " + name;
-      document.querySelector(".icon").src =
-        "https://openweathermap.org/img/wn/" + icon + ".png";
-      document.querySelector(".description").innerText = description;
-      document.querySelector(".temp").innerText = temp + "°C";
-      document.querySelector(".humidity").innerText =
-        "Humidity: " + humidity + "%";
-      document.querySelector(".wind").innerText =
-        "Wind speed: " + speed + " km/h";
-      document.querySelector(".weather").classList.remove("loading");
-      document.body.style.backgroundImage =
-        "url('https://source.unsplash.com/1600x900/?" + name + "')";
-    },
-    search: function () {
-      this.fetchWeather(document.querySelector(".search-bar").value);
-    },
-  };
-  
-  document.querySelector(".search button").addEventListener("click", function () {
-    weather.search();
-  });
-  
-  document
-    .querySelector(".search-bar")
-    .addEventListener("keyup", function (event) {
-      if (event.key == "Enter") {
-        weather.search();
-      }
-    });
-  
-  weather.fetchWeather("LALITPUR");
+const apiKey="ff46499780e490138710451eed3d6b14";
+const apiUrl="https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}";
+
+const searchBox = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search button");
+const weatherIcon =document.querySelector(".weather-icon");
+async function CheckWeather(city){
+	const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q="+ city + "&appid="+apiKey+"&units=metric");
+	var data = await response.json();
+	if(response.status == 404){
+		document.querySelector(".error").style.display = "block";
+		document.querySelector(".weather").style.display ="none";
+	}else{
+
+	
+	
+	document.querySelector(".city").innerHTML=data.name;
+	document.querySelector(".temp").innerHTML=Math.round(data.main.temp) + "°C";
+	document.querySelector(".humidity").innerHTML=data.main.humidity + "%";
+	document.querySelector(".humidity").innerHTML=data.wind.speed + "km/h";
+	if(data.weather[0].main == "Clouds"){
+        weatherIcon.src = "images/clouds.png";
+	}else if(data.weather[0].main == "Clear"){
+        weatherIcon.src = "images/clear.png";
+	}else if(data.weather[0].main == "Rain"){
+        weatherIcon.src = "images/rain.png";
+	}else if(data.weather[0].main == "Drizzle"){
+        weatherIcon.src = "images/drizzle.png";
+	}else if(data.weather[0].main == "Clear"){
+        weatherIcon.src = "images/mist.png";
+	}
+	document.querySelector(".weather").style.display="block";
+	document.querySelector(".error").style.display = "none";
+} 
+}
+searchBtn.addEventListener("click", ()=>{
+	CheckWeather(searchBox.value)
+})
+CheckWeather( );
+function updateTime() {
+  const now = new Date();
+  const timeString = now.toLocaleTimeString();
+  document.getElementById("clock").textContent = timeString;
+}
+
+setInterval(updateTime, 1000);
