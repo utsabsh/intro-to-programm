@@ -53,4 +53,26 @@ let weather = {
       }
     });
   
-  weather.fetchWeather("LALITPUR");
+  weather.fetchWeather("dhulikhel");
+  const form = document.querySelector('form');
+const weatherDiv = document.getElementById('weather');
+
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
+	const location = form.elements['location'].value;
+	getWeather(location);
+});
+
+async function getWeather(location) {
+	try {
+		const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid={YOUR_API_KEY}&units=metric`);
+		if (!response.ok) {
+			throw new Error(response.statusText);
+		}
+		const data = await response.json();
+		weatherDiv.innerHTML = `Current temperature in ${data.name}: ${data.main.temp}°C`;
+	} catch (error) {
+		console.log(error);
+		weatherDiv.innerHTML = `An error occurred while fetching weather data for ${location}. Please try again later.`;
+	}
+}
