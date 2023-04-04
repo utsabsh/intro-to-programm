@@ -1,5 +1,5 @@
 const apiKey="ff46499780e490138710451eed3d6b14";
-const apiUrl="https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}";
+
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
@@ -37,10 +37,3 @@ searchBtn.addEventListener("click", ()=>{
 	CheckWeather(searchBox.value)
 })
 CheckWeather( );
-function updateTime() {
-  const now = new Date();
-  const timeString = now.toLocaleTimeString();
-  document.getElementById("clock").textContent = timeString;
-}
-
-setInterval(updateTime, 1000);
