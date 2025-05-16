@@ -1,0 +1,179 @@
+/* StudentSettingPage.css */
+/* Theme Variables */
+:root {
+  --student-bg-primary: #ffffff;
+  --student-text-primary: #2c3e50;
+  --student-text-secondary: #34495e;
+  --student-card-bg: #ffffff;
+  --student-border-color: #e0e0e0;
+  --student-primary-color: #4dabf7;
+  --student-primary-hover: #339af0;
+  --student-danger-color: #e74c3c;
+  --student-danger-hover-bg: #fef0f0;
+  --student-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] {
+  --student-bg-primary: #121212;
+  --student-text-primary: #f5f5f5;
+  --student-text-secondary: #e0e0e0;
+  --student-card-bg: #1e1e1e;
+  --student-border-color: #333333;
+  --student-danger-hover-bg: #2a0a0a;
+  --student-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.student-settings-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--student-bg-primary);
+  color: var(--student-text-primary);
+  min-height: 100vh;
+}
+
+.student-settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.student-settings-header h1 {
+  color: var(--student-text-primary);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.student-back-button {
+  color: var(--student-primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.student-back-button:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.student-settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.student-settings-card {
+  background: var(--student-card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--student-shadow);
+  border: 1px solid var(--student-border-color);
+}
+
+.student-settings-card h2 {
+  color: var(--student-text-primary);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.student-form-group {
+  margin-bottom: 1.2rem;
+}
+
+.student-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--student-text-secondary);
+  font-weight: 500;
+}
+
+.student-form-group input[type="text"],
+.student-form-group input[type="email"],
+.student-form-group select {
+  width: 100%;
+  padding: 0.7rem;
+  background: var(--student-card-bg);
+  color: var(--student-text-primary);
+  border: 1px solid var(--student-border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.student-form-group input:focus,
+.student-form-group select:focus {
+  outline: none;
+  border-color: var(--student-primary-color);
+}
+
+.student-danger-zone {
+  border-left: 4px solid var(--student-danger-color);
+}
+
+.student-danger-button {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 0.8rem;
+  background: var(--student-card-bg);
+  border: 1px solid var(--student-danger-color);
+  color: var(--student-danger-color);
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.student-danger-button:hover {
+  background: var(--student-danger-hover-bg);
+}
+
+.student-save-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.student-save-button {
+  padding: 0.8rem 1.5rem;
+  background: var(--student-primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.student-save-button:hover {
+  background: var(--student-primary-hover);
+}
+
+@media (max-width: 768px) {
+  .student-settings-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .student-settings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+body, .student-settings-card {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.student-form-group input, 
+.student-form-group select {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

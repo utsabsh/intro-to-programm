@@ -1,0 +1,77 @@
+/* LoginSelection.css */
+.selection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    padding: 20px;
+  }
+  
+  .selection-box {
+    background: linear-gradient(to right, #89D8FF, #528199);
+    padding: 2.5rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+  }
+  
+  .welcome-title {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  .user-type-prompt {
+    color: #000000;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  .login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+ 
+  
+  .admin-button:hover {
+    background-color: #ACEAF9;
+  }
+  
+  .student-button {
+    background-color: #0798BB;
+    color: white;
+  }
+  
+  .student-button:hover {
+    background-color: #066b85;
+  }
+  .logo {
+    height: 90px;
+    width: 90px; /* Add width to match height for perfect circle */
+    margin-bottom: 20px;
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover; /* Ensures the image fits properly in the circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+    border: 2px solid white; /* Optional: adds white border around the circle */
+  }
+  .logo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }

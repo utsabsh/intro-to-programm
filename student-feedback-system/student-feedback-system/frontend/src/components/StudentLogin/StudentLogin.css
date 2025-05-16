@@ -1,0 +1,362 @@
+/* src/components/StudentLogin/StudentLogin.css */
+/* .student-login-container {
+    margin: auto;
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to left, #89D8FF, #528199);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 250px;
+    
+  }
+  
+  .login-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1.2rem;
+    position: relative;
+  }
+  
+  .input-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+    font-weight: 500;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .login-input:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .remember-me input {
+    margin-right: 0.5rem;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .login-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .footer-text {
+    color: #0e0f0f;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-link {
+    color: #054a79;
+    text-decoration: none;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    color: #101111;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+  }
+
+.success-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.success-content {
+  text-align: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #7f8c8d;
+  padding: 5px;
+}
+
+.password-toggle:hover {
+  color: #34495e;
+}
+
+.password-input-container .login-input {
+  padding-right: 40px;
+} */
+
+
+
+
+/* src/components/StudentLogin/StudentLogin.css */
+
+.student-login-container a, 
+.student-login-container button {
+  color: white !important;
+  text-decoration: underline !important;
+}
+.student-login-container a:hover,
+.student-login-container button:hover {
+  color: #1628e4 !important;
+}
+.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.student-login-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to left, #89D8FF, #528199);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+  font-weight: 500;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.remember-me input {
+  margin-right: 0.5rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #2980b9;
+}
+
+
+.login-footer {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-text {
+  color: #0e0f0f;
+  margin-bottom: 1rem;
+}
+
+/* .footer-link {
+  background: none;
+  border: none;
+  color: #054a79;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+} */
+
+.footer-link {
+  background: none;
+  border: none;
+  color: #054a79;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.back-button-container {
+  margin-top: 1rem;
+}
+
+
+/* Success Message Styles */
+.success-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.success-content {
+  text-align: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Password toggle styles */
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #7f8c8d;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.password-toggle:hover {
+  color: #34495e;
+}
+
+.password-input-container .login-input {
+  padding-right: 40px;
+}
+
+
+
+/* Remove the container styles */
+.forgot-password-container {
+  display: none; /* Remove this container completely */
+}
+
+/* Update the link styles */
+.forgot-password-link {
+  background: none;
+  border: none;
+  color: #054a79;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  margin-top: 0.5rem;
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+
+.forgot-password-link:hover {
+  color: #1628e4;
+  text-decoration: underline;
+}
+
+/* Keep the password input container styles */
+.password-input-container {
+  position: relative;
+  margin-bottom: 0.5rem; /* Add some space below the password field */
+}
